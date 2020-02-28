@@ -1,0 +1,11 @@
+@import "variables.scss";
+
+@each $value in $text_color {
+	.text-#{ nth($value, 1)}{
+		color: nth($value, 2);
+	}
+
+	.bg-#{nth($value, 1)}{
+		background-color: nth($value, 3);
+	}
+}

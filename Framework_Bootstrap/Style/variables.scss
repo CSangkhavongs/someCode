@@ -1,0 +1,32 @@
+$margin: 2%;
+
+$button_color: 
+	primary #007bff,
+	secondary #868e96,
+	success #1e7e34,
+	info #17a2b8,
+	warning #d39e00,
+	danger #dc3545,
+	dark #343a40,
+	light #dae0e5;
+
+$text_color: 
+	muted #868e96 #c3c7cc,
+	primary #007bff #a5d0ff,
+	success #1e7e34 #98cea5,
+	info #17a2b8 #91d5e0,
+	warning #d39e00 #fce192,
+	error #dc3545 #db8c93;
+
+$alert_color: 
+	success #155724 #d4edda #c3e6cb,
+	info #0c5460 #d1ecf1 #bee5eb,
+	warning #856404 #fff3cd #ffeeba,
+	danger #721c24 #f8d7da #f5c6cb;
+	
+$taille:
+	sm 0px 767px,
+	md 768px 991px,
+	lg 992px 1199px,
+	xl 1200px 150000px;
+	

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>2048</title>
+			<meta charset="utf-8">
+			<link href="Style/2048.css" rel="stylesheet" type="text/css">
+		</head>
+		<body>
+			<h1>2048</h1>
+			<div class="header">
+				<label id="taille">Taille de la grille :</label>
+				<select id="select">
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</select>
+				<button class="new-game button">Nouvelle partie</button>
+				<div id="score">
+					<label>Score :</label>
+				</div>
+				<div id="best_score">
+					<label>Meilleur score :</label>
+				</div>
+			</div>
+			<div id="responsive">
+				<div id="fleche">
+					<button id="haut"><img src="Style/flecheH.png" alt="fleche Haut" style="height: 90px;"></button>
+					<button id="gauche"><img src="Style/flecheG.png" alt="fleche Gauche" style="width: 90px;"></button>
+					<button id="droite"><img src="Style/flecheD.png" alt="fleche Droite" style="width: 90px;"></button>
+					<button id="bas"><img src="Style/flecheB.png" alt="fleche Bas" style="height: 90px;"></button>
+				</div>
+				<div class="container">
+					<div class="game-container">
+						<div class="grid-container"></div>
+					</div>
+				</div>
+			</div>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+			<script src="Script/2048.js"></script>
+		</body>
+	</html>

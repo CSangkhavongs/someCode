@@ -1,0 +1,63 @@
+$taille: xs sm md lg xl;
+$devicesUp: 0px 544px 768px 992px 1200px;
+$devicesDown: 543px 767px 991px 1199px 100000000000px;
+$fin: down up;
+$min: max;
+$visible: hidden visible;
+$px: 0px;
+
+@each $value in $fin {
+	@for $a from 1 through 2 {
+		$vus: nth($visible, $a);
+		@for $i from 1 through 5 {
+			@if($value == up){
+				$px: nth($devicesUp, $i);
+			}
+			@if($value == down){
+				$px: nth($devicesDown, $i);
+			}
+			$name: nth($taille, $i);
+			@if ($value == up and $vus == hidden){
+				$min: min;
+			}
+			 @else if ($value == up and $vus == visible){
+				$min: max;
+			}
+			@else if ($value == down and $vus == visible){
+				$min: min;
+			}
+			@if ($value == up and $name == xl and $visible == hidden){
+				@media screen and (min-device-width: $px) {
+					.#{$vus}-#{$name}-#{$value}{
+						visibility: hidden;
+					}
+				}
+			}
+			@else{
+				@media screen and (#{$min}-device-width: $px) {
+					.#{$vus}-#{$name}-#{$value}{
+						visibility: hidden;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media print{
+	.visible-print-block {
+		display: block;
+	}
+
+	.visible-print-inline {
+		display: inline;
+	}
+
+	.visible-print-inline-block {
+		display: inline-block
+	}	
+
+	.hidden-print {
+		visibility: hidden;
+	}
+}

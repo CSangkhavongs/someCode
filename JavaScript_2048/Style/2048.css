@@ -1,0 +1,243 @@
+body{
+  text-align: center;
+  background-color: #e0e0e0;
+  font-size: 18px;
+  font-weight: bold;
+  color: grey;
+}
+
+.grid-container {
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1; 
+}
+
+.grid-cell {
+  line-height: 110px;
+  text-align: center;
+  width: 110px;
+  height: 110px;
+  float: left;
+  border-radius: 3px;
+  background: rgba(238, 228, 218, 0.35);
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.game-container {
+  position: relative;
+  background: #99889b;
+  border-radius: 6px;
+  width: 500px;
+  height: 500px;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+.container {
+  width: 500px;
+  margin: auto;
+}
+
+.num-2 {
+  background-color: #cbd2ef;
+}
+.num-4 {
+  background-color: #e3cbef;
+}
+.num-8 {
+  background-color: #daaeef;
+}
+.num-16 {
+  background-color: #cb9ae2;
+}
+.num-32 {
+  background-color: #b983d3;
+}
+.num-64 {
+  background-color: #a26dbc;
+}
+.num-128 {
+  background-color: #9d64ba;
+}
+.num-256 {
+  background-color: #8d49af;
+}
+.num-512 {
+  background-color: #8138a5;
+}
+.num-1024 {
+  background-color: #7318a0;
+}
+.num-2048 {
+  background-color: #470568;
+}
+
+.box{ 
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+  text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+}
+
+#select {
+  margin-left: 5px;
+  border: 5px solid white;
+  width: 80px;
+  height: 50px;
+  background-color: #b8b2c1;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 2px 2px 2px #7f7487;
+}
+
+.button {
+  margin-left: 5px;
+  border: 5px solid white;
+  width: 100px;
+  height: 60px;
+  background-color: #b8b2c1;
+  font-weight: bold;
+  font-size: 15px;
+  box-shadow: 2px 2px 2px #7f7487;
+}
+
+.header {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#score {
+  margin-left: 5px;
+  margin-bottom: 5px;
+  border: 5px solid white;
+  width: 100px;
+  height: 50px;
+  background-color: #b8b2c1;
+  font-weight: bold;
+  font-size: 15px;
+  color: black;
+}
+
+#best_score{
+  margin-left: 5px;
+  margin-bottom: 5px;
+  border: 5px solid white;
+  width: 100px;
+  height: 50px;
+  background-color: #b8b2c1;
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+}
+
+#taille {
+  margin-top: 12px;
+  color: #a18fad;
+}
+
+h1 {
+  color: #a18fad;
+}
+
+#fleche {
+  float: left;
+  width: 290px;
+  height: 290px;
+  margin-left: 250px;
+}
+
+#bas {
+  margin-top: 70%;
+  height: 100px;
+  border-radius: 15px;
+  background-color: #b8b2c1;
+  box-shadow: 2px 2px 2px #7f7487;
+}
+#haut {
+  position: absolute;
+  margin-top: 2.3%;
+  height: 100px;
+  border-radius: 15px;
+  background-color: #b8b2c1;
+  box-shadow: 2px 2px 2px #7f7487;
+}
+#droite{
+  float: right;
+  margin-top: 50%;
+  width: 100px;
+  border-radius: 15px;
+  background-color: #b8b2c1;
+  box-shadow: 2px 2px 2px #7f7487;
+}
+#gauche{
+  float: left;
+  margin-top: 50%;
+  width: 100px;
+  border-radius: 15px;
+  background-color: #b8b2c1;
+  box-shadow: 2px 2px 2px #7f7487;
+}
+
+#end{
+  border-radius: 10px;
+  position: absolute;
+  z-index: 10; 
+  width: 500px;
+  height: 500px;
+  background-color: rgba(153, 136, 155, 0.6);
+}
+
+#titre_end{
+  color: #470b4f;
+  font-weight: bold;
+  font-size: 100px;
+  font-family: system-ui;
+}
+
+#score_end{
+  color: #470b4f;
+  font-size: 40px;
+}
+
+#new{
+  font-size: 25px;
+  color: #a55fad;
+}
+
+@media screen and (min-device-width: 1400px) and (max-device-width: 1650px) {
+  #fleche {
+    float: left;
+    width: 290px;
+    height: 290px;
+    margin-left: 100px;
+  }
+}
+
+@media screen and (min-device-width: 1250px) and (max-device-width: 1399px) {
+  #fleche {
+    float: left;
+    width: 290px;
+    height: 290px;
+    margin-left: 50px;
+  }
+}
+
+@media screen and  (max-device-width: 1249px) {
+  #fleche { 
+    position: absolute;
+    width: 290px;
+    height: 290px;
+    margin-left: 50px;
+    margin-top: 45%;
+    margin-left: 35%;
+  }
+
+  #responsive{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

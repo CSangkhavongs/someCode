@@ -1,0 +1,13 @@
+@import "variables.scss";
+
+@each $value in $alert_color {
+	.alert-#{nth($value, 1)}{
+		border: 1px solid;
+		border-radius: 9px;
+		width: 100%;
+		padding: 5px;
+		background-color: nth($value, 3);
+		color: nth($value, 2);
+		border-color: nth($value, 4);
+	}
+}

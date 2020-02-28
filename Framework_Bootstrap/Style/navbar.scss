@@ -1,0 +1,98 @@
+@import "variables.scss";
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	ul{
+		display: flex;
+		flex-direction: row;
+		position: absolute;
+		right: 15px;
+	}
+}
+
+.nav-item {
+	margin: 5px 0 5px 0;
+    list-style: none;
+	margin-right: 20px;
+    &:hover {
+       	font-weight: bolder;
+    }
+}
+
+.nav-link {
+    text-decoration: none; 
+	margin-right: 20px;
+}
+
+.navbar-brand {
+	text-decoration: none;
+	line-height: inherit;
+	list-style: none;
+	margin-left: 10px;
+	font-weight: bold;
+	font-size: 19px;    
+	
+	& img{
+		margin-top: 10px;
+		width: 80px;
+		height: 50px;
+	}
+}
+
+.navbar-to {
+    font-family: Arial;
+    color: black;
+    height: 70px;
+    padding-left: 45px;
+    overflow: hidden;
+    .navbar-toggle { 
+    	display: none; 
+    }
+    
+    .button-toggler {
+        position: absolute;
+        right: 15px;
+    }
+}
+
+.navbar-show {
+    @extend .navbar-to;
+    overflow: hidden;
+    height: 160px;
+    .navbar-toggled { 
+   		display: block; 
+    }
+    li {
+    	margin: 5px 0 5px 0;
+    }
+}
+
+.transition {
+    transition: all 1s ease;
+}
+
+.navbar-toggler-icon{
+	margin-top: 13px;
+	margin-right: 13px;
+	border-radius: 5px;
+	background: url("list.png");
+	border: 1px solid black;
+	box-shadow: 2px 2px 2px black;
+	width: 43px;
+	height: 43px;
+}
+
+@each $value in $taille {
+
+	@media screen and (min-device-width: nth($value, 2)) and (max-device-width: nth($value, 3)) {
+		.navbar-expand-#{nth($value, 1)}{
+			display: flex;
+			flex-direction: column;
+			& ul {
+				display: flex;
+				flex-direction: column;
+			}	
+		}
+	}
+}

@@ -1,0 +1,100 @@
+@import
+	"button.scss",
+	"image.scss",
+	"color.scss",
+	"variables.scss",
+	"alerte.scss",
+	"hidden.scss",
+	"navbar.scss";
+	
+$margin: 1%;
+
+.container{
+	width: 90px;
+}
+
+.container-fluid{
+	width: 100%;
+}
+
+%clearfix:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.row {
+    @extend %clearfix;
+    & + & {
+        margin-top: $margin;
+    }
+}
+
+[class^="col-"] {
+	margin-top: 1%;
+    float: left;
+    margin-right: $margin;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+    justify-content: center;
+ 
+    &:last-child {
+        margin-right: 0%;
+    }
+}
+
+@media screen and (max-device-width: 576px) {
+
+	$a: 11;
+	@for $i from 1 through 12 {
+		.col-#{$i}{
+	    	width: (100% / (12/$i)) - ($margin * $a / 12);
+			$a: $a - 1;
+		}
+	}
+}
+
+@media screen and (min-device-width: 577px) and (max-device-width: 767px) {
+
+	$a: 11;
+	@for $i from 1 through 12 {
+		.col-sm-#{$i}{
+	    	width: (100% / (12/$i)) - ($margin * $a / 12);
+			$a: $a - 1;
+		}
+	}
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 991px) {
+
+	$a: 11;
+	@for $i from 1 through 12 {
+		.col-md-#{$i}{
+	    	width: (100% / (12/$i)) - ($margin * $a / 12);
+			$a: $a - 1;
+		}
+	}
+}
+
+@media screen and (min-device-width: 992px) and (max-device-width: 1199px) {
+
+	$a: 11;
+	@for $i from 1 through 12 {
+		.col-lg-#{$i}{
+	    	width: (100% / (12/$i)) - ($margin * $a / 12);
+			$a: $a - 1;
+		}
+	}
+}
+
+@media screen and (min-device-width: 1200px){
+
+	$a: 11;
+	@for $i from 1 through 12 {
+		.col-xl-#{$i}{
+	    	width: (100% / (12/$i)) - ($margin * $a / 12);
+			$a: $a - 1;
+		}
+	}
+}

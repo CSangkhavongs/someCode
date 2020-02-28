@@ -1,0 +1,137 @@
+$margin: 3%;
+$i: 1;
+
+$name_color: (
+	'primary',
+	'secondary',
+	'success',
+	'info',
+	'warning',
+	'danger',
+	'dark',
+	'light',
+	);
+
+$color: (
+	#007bff,
+	#868e96,
+	#1e7e34,
+	#17a2b8,
+	#d39e00,
+	#dc3545,
+	#343a40,
+	#dae0e5,
+	);
+
+.container{
+	width: auto;
+}
+
+.container-fluid{
+	width: 100%;
+}
+
+.row {
+    display: block;
+}
+
+[class^="col-"] {
+	margin-top: $margin;
+    float: left;
+    margin-right: $margin;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+    border: 1px solid black;
+ 
+    &:last-child {
+        margin-right:0%;
+    }
+}
+
+[class^="btn"] { 
+	display: inline-block;
+	border: 1px solid #743EA5; 
+	border-radius: 5px;
+	color: #B0D1CA;
+	text-decoration: none;
+	text-shadow: 0 1px #000;
+	cursor: pointer;
+	font: bold 20px sans-serif;
+	text-align: center;
+	background-color: #A8F3E4;
+	font-size: 100%;
+	line-height: 30px;
+}
+
+.btn-lg {
+	line-height: 42px;
+}
+
+.btn-sm {
+	line-height: 20px;	
+}
+
+@each $type in $name_color {
+	.btn-#{$type}{
+		background-color: nth($color, $i);
+		$i: $i + 1;
+	}
+}
+
+
+@media screen and (max-device-width: 576px) {
+
+	$a: 11;
+	@for $i from 1 through 12 {
+		.col-#{$i}{
+	    	width: (100% / (12/$i)) - ($margin * $a / 12);
+			$a: $a - 1;
+		}
+	}
+}
+
+@media screen and (min-device-width: 577px) and (max-device-width: 767px) {
+
+	$a: 11;
+	@for $i from 1 through 12 {
+		.col-sm-#{$i}{
+	    	width: (100% / (12/$i)) - ($margin * $a / 12);
+			$a: $a - 1;
+		}
+	}
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 991px) {
+
+	$a: 11;
+	@for $i from 1 through 12 {
+		.col-md-#{$i}{
+	    	width: (100% / (12/$i)) - ($margin * $a / 12);
+			$a: $a - 1;
+		}
+	}
+}
+
+@media screen and (min-device-width: 992px) and (max-device-width: 1199px) {
+
+	$a: 11;
+	@for $i from 1 through 12 {
+		.col-lg-#{$i}{
+	    	width: (100% / (12/$i)) - ($margin * $a / 12);
+			$a: $a - 1;
+		}
+	}
+}
+
+@media screen and (min-device-width: 1200px){
+
+	$a: 11;
+	@for $i from 1 through 12 {
+		.col-xl-#{$i}{
+	    	width: (100% / (12/$i)) - ($margin * $a / 12);
+			$a: $a - 1;
+		}
+	}
+}
+
